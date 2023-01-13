@@ -1,0 +1,31 @@
+.features {
+  display: flex;
+  column-gap: 30px;
+
+  &__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+
+  &__icon-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 30px;
+
+    background-color: $bg-buttons-color;
+    border-radius: 4px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $title-text-color;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}

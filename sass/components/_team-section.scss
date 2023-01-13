@@ -1,0 +1,43 @@
+.section-team {
+  background-color: $bg-buttons-color;
+}
+
+.team {
+  display: flex;
+  column-gap: 30px;
+
+  &__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+
+    text-align: center;
+
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__images {
+    margin-bottom: 30px;
+  }
+
+  &__caption {
+    margin-bottom: 16px;
+  }
+
+  &__member {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: $title-text-color;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  &__social {
+    margin-bottom: 30px;
+  }
+}
