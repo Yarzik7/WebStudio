@@ -1,7 +1,4 @@
 .page-header {
-  max-width: 1600px;
-  margin: 0 auto;
-
   border-bottom: 1px solid $header-border-color;
 
   &__container {
@@ -11,14 +8,7 @@
   }
 
   &__navigation {
-    display: flex;
-    align-items: center;
-    margin-left: 93px;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
+    display: none;
   }
 
   &__nav-flex {
@@ -27,8 +17,8 @@
   }
 
   &__logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
@@ -79,16 +69,13 @@
 }
 
 .contacts-header {
-  display: flex;
-  margin-left: auto;
+  // margin-left: auto;
 
-  &__item:not(:first-child) {
-    margin-left: 40px;
-  }
+  // &__item:not(:first-child) {
+  //   margin-bottom: 10px;
+  // }
 
   &__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
     display: flex;
     align-items: center;
 
@@ -102,10 +89,14 @@
     }
   }
 
-  &__icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
+  // &__icon {
+  //   margin-right: 10px;
+  //   fill: currentColor;
+  // }
+}
+
+.menu-container {
+  display: none;
 }
 
 .menu-switch {
@@ -125,21 +116,87 @@
   outline: none;
 
   cursor: pointer;
+}
 
-  @media screen and (min-width: 768px) {
+// @media screen and (min-width: 480px) {
+// }
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    &__navigation {
+      display: flex;
+      align-items: center;
+      margin-left: 93px;
+      width: 100%;
+    }
+  }
+
+  .contacts-header {
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+      line-height: 1.17;
+      color: $primary-text-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+
+    &__icon {
+      margin-right: 10px;
+      fill: currentColor;
+    }
+  }
+
+  .menu-switch {
     display: none;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .page-header {
-    position: relative;
-
-    height: 60px;
-
     &__logo {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  .contacts-header {
+    display: flex;
+
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__item:not(:first-child) {
+      margin-left: 40px;
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      font-size: 14px;
+      line-height: 1.14;
     }
   }
 }
+
+// @media screen and (max-width: 767px) {
+//   .page-header {
+//     &__logo {
+//       padding-top: 16px;
+//       padding-bottom: 16px;
+//     }
+//   }
+// }
