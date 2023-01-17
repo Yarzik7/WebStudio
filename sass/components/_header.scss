@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   height: 60px;
 
   border-bottom: 1px solid $header-border-color;
@@ -25,47 +26,8 @@
 }
 
 .site-nav {
-  display: flex;
-
-  &__item {
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 56px;
-    }
-  }
-
   &__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: block;
-
-    color: $title-text-color;
-
     @extend %header-links;
-
-    &:hover,
-    &:focus {
-      color: $accent-color;
-    }
-
-    &--current {
-      color: $accent-color;
-    }
-
-    &--current::after {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-
-      width: 100%;
-      height: 4px;
-
-      background-color: $accent-color;
-      border-radius: 2px;
-
-      content: '';
-    }
   }
 }
 
@@ -83,7 +45,35 @@
 }
 
 .menu-container {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(200%);
+
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+
+  background-color: $primary-white-color;
+
+  transition: transform 350ms $timing-function;
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    transition: fill $transition-duration $timing-function;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
 }
 
 .menu-switch {
@@ -103,6 +93,37 @@
   outline: none;
 
   cursor: pointer;
+  transition: fill $transition-duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.menu-site-nav {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    color: $title-text-color;
+
+    @extend %header-links;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--current {
+      color: $accent-color;
+    }
+  }
 }
 
 // @media screen and (min-width: 480px) {
@@ -117,6 +138,49 @@
       align-items: center;
       margin-left: 93px;
       width: 100%;
+    }
+  }
+
+  .site-nav {
+    display: flex;
+
+    &__item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 56px;
+      }
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      display: block;
+
+      color: $title-text-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+
+      &--current {
+        color: $accent-color;
+      }
+
+      &--current::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+
+        content: '';
+      }
     }
   }
 
@@ -147,6 +211,10 @@
     }
   }
 
+  .menu-container {
+    display: none;
+  }
+
   .menu-switch {
     display: none;
   }
@@ -161,9 +229,44 @@
   }
 
   .site-nav {
+    display: flex;
+
     &__item {
+      position: relative;
+
       &:not(:last-child) {
-        margin-right: 50px;
+        margin-right: 56px;
+      }
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      display: block;
+
+      color: $title-text-color;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+
+      &--current {
+        color: $accent-color;
+      }
+
+      &--current::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: $accent-color;
+        border-radius: 2px;
+
+        content: '';
       }
     }
   }
