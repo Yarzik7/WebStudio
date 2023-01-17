@@ -147,6 +147,11 @@
     line-height: 1.17;
     color: $primary-text-color;
 
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
     &--big {
       font-size: 34px;
       line-height: 1.18;

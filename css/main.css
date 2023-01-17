@@ -502,6 +502,9 @@ body {
   line-height: 1.17;
   color: #757575;
 }
+.menu-contacts__link:hover, .menu-contacts__link:focus {
+  color: #2196f3;
+}
 .menu-contacts__link--big {
   font-size: 34px;
   line-height: 1.18;
