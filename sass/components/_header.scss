@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  overflow: hidden;
   height: 60px;
 
   border-bottom: 1px solid $header-border-color;
@@ -45,14 +46,16 @@
 }
 
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  transform: translateX(200%);
+  transform: translateX(100%);
 
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
 
   background-color: $primary-white-color;
 
@@ -102,6 +105,8 @@
 }
 
 .menu-site-nav {
+  margin-bottom: auto;
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 32px;
@@ -112,6 +117,8 @@
     display: block;
 
     color: $title-text-color;
+    font-size: 40px;
+    line-height: 1.18;
 
     @extend %header-links;
 
@@ -123,6 +130,50 @@
     &--current {
       color: $accent-color;
     }
+  }
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    @extend %header-links;
+
+    font-size: 24px;
+    line-height: 1.17;
+    color: $primary-text-color;
+
+    &--big {
+      font-size: 34px;
+      line-height: 1.18;
+      color: $accent-color;
+    }
+  }
+}
+
+.menu-social {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  &__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+
+    border-right: 1px solid $modal-fields-border;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+    text-decoration: none;
   }
 }
 
