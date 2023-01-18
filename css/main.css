@@ -74,6 +74,7 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  margin: 0 auto;
 }
 .section__title {
   margin-bottom: 50px;
@@ -373,6 +374,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 60px;
+  margin: 0 auto;
   border-bottom: 1px solid #ececec;
 }
 .page-header__container {
@@ -411,8 +413,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
@@ -1049,6 +1051,7 @@ body {
 }
 
 .section-profile {
+  display: none;
   padding-top: 0;
 }
 
@@ -1086,7 +1089,13 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
+@media screen and (min-width: 1200px) {
+  .section-profile {
+    display: block;
+  }
+}
 .section-team {
+  margin: 0 auto;
   background-color: #f5f4fa;
 }
 
