@@ -2,6 +2,7 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+  margin: 0 auto;
 
   background-color: $primary-white-color;
 }
@@ -19,6 +20,7 @@ body {
 }
 
 .section {
+  max-width: 1600px;
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0 auto;

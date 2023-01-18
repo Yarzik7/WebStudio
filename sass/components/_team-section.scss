@@ -12,6 +12,7 @@
 
   &__item {
     min-width: 450px;
+    width: 100%;
     flex-basis: calc((100% - 3 * 30px) / 4);
 
     text-align: center;
