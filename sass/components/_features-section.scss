@@ -6,8 +6,8 @@
   width: 100%;
 
   &__item {
-    min-width: 450px;
-    flex-basis: calc((100% - 3 * 30px) / 4);
+    max-width: 450px;
+    width: 100%;
   }
 
   &__icon-container {
@@ -24,6 +24,11 @@
     border-radius: 4px;
   }
 
+  &__icon {
+    min-width: 70px;
+    min-height: 70px;
+  }
+
   &__title {
     font-size: 14px;
     line-height: 1.14;
@@ -37,14 +42,19 @@
   }
 }
 
-// @media screen and (min-width: 480px) {
-
-// }
+@media screen and (min-width: 480px) {
+  .features {
+    &__item {
+      min-width: 450px;
+    }
+  }
+}
 
 @media screen and (min-width: 768px) {
   .features {
     &__item {
       min-width: 354px;
+      flex-basis: calc((100% - 3 * 30px) / 4);
     }
   }
 }

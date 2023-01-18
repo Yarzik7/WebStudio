@@ -1,6 +1,4 @@
 .section-team {
-  margin: 0 auto;
-
   background-color: $bg-buttons-color;
 }
 
@@ -11,9 +9,8 @@
   gap: 30px;
 
   &__item {
-    min-width: 450px;
+    max-width: 450px;
     width: 100%;
-    flex-basis: calc((100% - 3 * 30px) / 4);
 
     text-align: center;
 
@@ -48,14 +45,19 @@
   }
 }
 
-// @media screen and (min-width: 480px) {
-
-// }
+@media screen and (min-width: 480px) {
+  .team {
+    &__item {
+      min-width: 450px;
+    }
+  }
+}
 
 @media screen and (min-width: 768px) {
   .team {
     &__item {
       min-width: 354px;
+      flex-basis: calc((100% - 3 * 30px) / 4);
     }
   }
 }

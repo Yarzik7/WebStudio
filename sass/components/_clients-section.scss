@@ -5,10 +5,9 @@
   gap: 30px;
 
   &__item {
-    min-width: 210px;
+    max-width: 210px;
     width: 100%;
     height: 92px;
-    flex-basis: calc((100% - 5 * 30px) / 6);
   }
 
   &__link {
@@ -38,9 +37,14 @@
   }
 }
 
-// @media screen and (min-width: 480px) {
-
-// }
+@media screen and (min-width: 480px) {
+  .clients {
+    &__item {
+      min-width: 210px;
+      flex-basis: calc((100% - 5 * 30px) / 6);
+    }
+  }
+}
 
 @media screen and (min-width: 768px) {
   .clients {

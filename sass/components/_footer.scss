@@ -5,10 +5,12 @@
   background-color: $bg-footer-color;
 
   &__address {
-    text-align: center;
-
     @media screen and (max-width: 767px) {
       margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
     }
   }
 
@@ -17,7 +19,9 @@
   }
 
   &__social {
-    text-align: center;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__subscribe {

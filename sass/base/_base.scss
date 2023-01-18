@@ -14,16 +14,16 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 
 .section {
-  max-width: 1600px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__title {
     margin-bottom: 50px;
@@ -50,5 +50,10 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
