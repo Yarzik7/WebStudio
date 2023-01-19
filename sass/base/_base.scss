@@ -5,6 +5,10 @@ body {
   margin: 0 auto;
 
   background-color: $primary-white-color;
+
+  &.is-open {
+    overflow: hidden;
+  }
 }
 
 .images {

@@ -1,8 +1,7 @@
 .page-header {
   position: relative;
   overflow: hidden;
-  height: 60px;
-  // margin: 0 auto;
+  // height: 60px;
 
   border-bottom: 1px solid $header-border-color;
 
@@ -27,9 +26,60 @@
   }
 }
 
+// .site-nav {
+//   &__link {
+//     font-size: 14px;
+//     line-height: 1.14px;
+
+//     @extend %header-links;
+//   }
+// }
+
 .site-nav {
+  display: flex;
+
+  font-size: 14px;
+  line-height: 1.14;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 53px;
+    }
+  }
+
   &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+
+    color: $title-text-color;
+
     @extend %header-links;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--current {
+      color: $accent-color;
+    }
+
+    &--current::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      background-color: $accent-color;
+      border-radius: 2px;
+
+      content: '';
+    }
   }
 }
 
@@ -55,12 +105,12 @@
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
-  display: none;
+  display: flex;
   flex-direction: column;
 
   background-color: $primary-white-color;
 
-  transition: transform 2350ms $timing-function;
+  transition: transform 350ms $timing-function;
 
   &__close {
     position: absolute;
@@ -76,7 +126,6 @@
   }
 
   &.is-open {
-    display: flex;
     transform: translateX(0);
   }
 }
@@ -107,7 +156,8 @@
 }
 
 .menu-site-nav {
-  margin-bottom: auto;
+  font-size: 40px;
+  line-height: 1.18;
 
   &__item {
     &:not(:last-child) {
@@ -119,8 +169,6 @@
     display: block;
 
     color: $title-text-color;
-    font-size: 40px;
-    line-height: 1.18;
 
     @extend %header-links;
 
@@ -136,7 +184,11 @@
 }
 
 .menu-contacts {
+  margin-top: auto;
   margin-bottom: 64px;
+
+  font-size: 24px;
+  line-height: 1.17;
 
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -144,9 +196,6 @@
 
   &__link {
     @extend %header-links;
-
-    font-size: 24px;
-    line-height: 1.17;
     color: $primary-text-color;
 
     &:hover,
@@ -167,6 +216,9 @@
   flex-wrap: wrap;
   row-gap: 10px;
 
+  font-size: 18px;
+  line-height: 1.22;
+
   &__item:not(:last-child) {
     padding-right: 10px;
     margin-right: 10px;
@@ -175,12 +227,8 @@
   }
 
   &__link {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
+    @extend %header-links;
     color: $accent-color;
-    text-decoration: none;
   }
 }
 
@@ -190,58 +238,63 @@
 @media screen and (min-width: 768px) {
   .page-header {
     overflow: visible;
-    height: 80px;
+    // height: 80px;
 
     &__navigation {
       display: flex;
       align-items: center;
-      margin-left: 93px;
+      margin-left: 88px;
       width: 100%;
     }
-  }
 
-  .site-nav {
-    display: flex;
-
-    &__item {
-      position: relative;
-
-      &:not(:last-child) {
-        margin-right: 56px;
-      }
-    }
-
-    &__link {
-      padding-top: 32px;
-      padding-bottom: 32px;
-      display: block;
-
-      color: $title-text-color;
-
-      &:hover,
-      &:focus {
-        color: $accent-color;
-      }
-
-      &--current {
-        color: $accent-color;
-      }
-
-      &--current::after {
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-
-        width: 100%;
-        height: 4px;
-
-        background-color: $accent-color;
-        border-radius: 2px;
-
-        content: '';
-      }
+    &__logo {
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
   }
+
+  // .site-nav {
+  //   display: flex;
+
+  //   &__item {
+  //     position: relative;
+
+  //     &:not(:last-child) {
+  //       margin-right: 53px;
+  //     }
+  //   }
+
+  //   &__link {
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //     display: block;
+
+  //     color: $title-text-color;
+
+  //     &:hover,
+  //     &:focus {
+  //       color: $accent-color;
+  //     }
+
+  //     &--current {
+  //       color: $accent-color;
+  //     }
+
+  //     &--current::after {
+  //       position: absolute;
+  //       bottom: 0px;
+  //       left: 0;
+
+  //       width: 100%;
+  //       height: 4px;
+
+  //       background-color: $accent-color;
+  //       border-radius: 2px;
+
+  //       content: '';
+  //     }
+  //   }
+  // }
 
   .contacts-header {
     margin-left: auto;
@@ -281,54 +334,50 @@
 
 @media screen and (min-width: 1200px) {
   .page-header {
-    &__logo {
-      padding-top: 24px;
-      padding-bottom: 24px;
-    }
   }
 
-  .site-nav {
-    display: flex;
+  // .site-nav {
+  //   display: flex;
 
-    &__item {
-      position: relative;
+  //   &__item {
+  //     position: relative;
 
-      &:not(:last-child) {
-        margin-right: 56px;
-      }
-    }
+  //     &:not(:last-child) {
+  //       margin-right: 56px;
+  //     }
+  //   }
 
-    &__link {
-      padding-top: 32px;
-      padding-bottom: 32px;
-      display: block;
+  //   &__link {
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //     display: block;
 
-      color: $title-text-color;
+  //     color: $title-text-color;
 
-      &:hover,
-      &:focus {
-        color: $accent-color;
-      }
+  //     &:hover,
+  //     &:focus {
+  //       color: $accent-color;
+  //     }
 
-      &--current {
-        color: $accent-color;
-      }
+  //     &--current {
+  //       color: $accent-color;
+  //     }
 
-      &--current::after {
-        position: absolute;
-        bottom: -1px;
-        left: 0;
+  //     &--current::after {
+  //       position: absolute;
+  //       bottom: -1px;
+  //       left: 0;
 
-        width: 100%;
-        height: 4px;
+  //       width: 100%;
+  //       height: 4px;
 
-        background-color: $accent-color;
-        border-radius: 2px;
+  //       background-color: $accent-color;
+  //       border-radius: 2px;
 
-        content: '';
-      }
-    }
-  }
+  //       content: '';
+  //     }
+  //   }
+  // }
 
   .contacts-header {
     display: flex;
