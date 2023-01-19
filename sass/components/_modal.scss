@@ -16,21 +16,26 @@
 
   width: 100%;
   height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 95px;
 
   background-color: $bg-backdrop;
   transition: opacity 350ms $timing-function, visibility 350ms $timing-function;
 
   opacity: 1;
+  overflow-y: scroll;
 }
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 95px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 
   max-width: 450px;
   max-height: 609px;
+  width: 100%;
   padding: 40px;
 
   background-color: $primary-white-color;
@@ -102,23 +107,27 @@
 }
 
 @media screen and (min-width: 480px) {
-  .modal {
-    min-width: 450px;
-  }
+  // .modal {
+  //   min-width: 450px;
+  //   min-height: 609px;
+  // }
 }
 
 @media screen and (min-width: 768px) {
+  .modal {
+    top: 208px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    top: 221px;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;
+    max-width: 528px;
+    max-height: 581px;
     padding: 40px;
 
     background-color: $primary-white-color;
@@ -154,6 +163,7 @@
     }
 
     &__title {
+      max-width: 448px;
       margin-bottom: 12px;
 
       font-weight: 700;

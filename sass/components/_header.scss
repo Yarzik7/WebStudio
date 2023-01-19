@@ -50,18 +50,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
   transform: translateX(100%);
 
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
-  display: flex;
+  display: none;
   flex-direction: column;
 
   background-color: $primary-white-color;
 
-  transition: transform 350ms $timing-function;
+  transition: transform 2350ms $timing-function;
 
   &__close {
     position: absolute;
@@ -77,6 +76,7 @@
   }
 
   &.is-open {
+    display: flex;
     transform: translateX(0);
   }
 }

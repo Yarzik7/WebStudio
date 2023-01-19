@@ -36,6 +36,22 @@
       border-color: $accent-color;
       outline: none;
     }
+
+    &.comment-field {
+      min-width: 193px;
+      min-height: 120px;
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      resize: none;
+
+      &::placeholder {
+        color: $modal-placeholder;
+      }
+    }
   }
 
   &__icon {
@@ -50,19 +66,21 @@
   }
 }
 
-.comment-field {
-  height: 120px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
+// .comment-field {
+//   min-width: 193px;
+//   min-height: 120px;
+//   width: 100%;
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+//   padding-left: 16px;
+//   padding-right: 16px;
 
-  resize: none;
+//   resize: none;
 
-  &::placeholder {
-    color: $modal-placeholder;
-  }
-}
+//   &::placeholder {
+//     color: $modal-placeholder;
+//   }
+// }
 
 .form-checkbox {
   &__agree-label {
@@ -135,7 +153,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 425px;
+      max-width: 425px;
       /* margin-bottom: 30px; */
 
       font-size: 14px;
