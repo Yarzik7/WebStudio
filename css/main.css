@@ -495,8 +495,8 @@ body.is-open {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(300%);
+          transform: translateX(300%);
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
@@ -966,14 +966,20 @@ body.is-open {
     min-height: 600px;
   }
 }
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
 .features__item {
   max-width: 450px;
   width: 100%;
-}
-@media screen and (max-width: 767px) {
-  .features__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
 .features__icon-container {
   padding-top: 25px;
@@ -1021,17 +1027,6 @@ body.is-open {
   }
 }
 @media screen and (min-width: 768px) {
-  .features {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 30px;
-  }
   .features__item {
     min-width: 354px;
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
@@ -1099,6 +1094,17 @@ body.is-open {
   background-color: #f5f4fa;
 }
 
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
 .team__item {
   width: 100%;
   padding-bottom: 24px;
@@ -1107,11 +1113,6 @@ body.is-open {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-@media screen and (max-width: 767px) {
-  .team__item {
-    margin-bottom: 30px;
-  }
 }
 @media screen and (max-width: 479px) {
   .team__item {
@@ -1141,17 +1142,6 @@ body.is-open {
   }
 }
 @media screen and (min-width: 768px) {
-  .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 30px;
-  }
   .team__item {
     min-width: 354px;
     -ms-flex-preferred-size: calc((100% - 30px) / 2);

@@ -1,13 +1,18 @@
 .features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
   &__item {
     max-width: 450px;
     width: 100%;
 
-    &:not(:last-child) {
-      @media screen and (max-width: 767px) {
-        margin-bottom: 30px;
-      }
-    }
+    // &:not(:last-child) {
+    //   @media screen and (max-width: 767px) {
+    //     margin-bottom: 30px;
+    //   }
+    // }
   }
 
   &__icon-container {
@@ -59,11 +64,6 @@
 
 @media screen and (min-width: 768px) {
   .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-
     &__item {
       min-width: 354px;
       flex-basis: calc((100% - 3 * 30px) / 4);
