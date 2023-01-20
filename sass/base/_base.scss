@@ -13,7 +13,7 @@ body {
 
 .images {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -24,7 +24,6 @@ body {
 }
 
 .section {
-  width: 100%;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -32,8 +31,8 @@ body {
   &__title {
     margin-bottom: 50px;
 
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     color: $title-text-color;
   }
@@ -59,5 +58,10 @@ body {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 1.17;
+    }
   }
 }

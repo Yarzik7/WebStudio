@@ -127,6 +127,7 @@
   background-color: $primary-white-color;
 
   transition: transform 350ms $timing-function;
+  overflow-y: scroll;
 
   &__close {
     position: absolute;
