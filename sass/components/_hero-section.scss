@@ -39,7 +39,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  /* border: 1px solid var(--header-logo-color); */
 }
 
 @media screen and (min-width: 480px) {
@@ -52,6 +51,7 @@
   .section-hero {
     padding: 204px 118px;
   }
+
   .overlay {
     max-width: 1200px;
   }
@@ -62,45 +62,16 @@
     padding-top: 200px;
     padding-bottom: 200px;
 
-    text-align: center;
-
-    background-color: $bg-footer-color;
-
     &__title {
-      margin-top: 0;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
       max-width: 696px;
 
-      font-weight: 900;
       font-size: 44px;
-      line-height: 1.37;
-      text-align: center;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: $primary-white-color;
-    }
-
-    &__buttons {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-right: 24px;
-      padding-left: 24px;
+      line-height: 1.36;
     }
   }
 
   .overlay {
     max-width: 1600px;
     min-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
-    background-image: linear-gradient($bg-hero-gradient, $bg-hero-gradient),
-      url(../images/background-hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    /* border: 1px solid var(--header-logo-color); */
   }
 }

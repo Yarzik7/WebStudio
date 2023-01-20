@@ -1,7 +1,6 @@
 .page-header {
   position: relative;
   overflow: hidden;
-  // height: 60px;
 
   border-bottom: 1px solid $header-border-color;
 
@@ -84,7 +83,19 @@
 }
 
 .contacts-header {
+  margin-left: auto;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   &__link {
+    display: flex;
+    align-items: center;
+
     color: $primary-text-color;
 
     @extend %header-links;
@@ -93,6 +104,11 @@
     &:focus {
       color: $accent-color;
     }
+  }
+
+  &__icon {
+    margin-right: 8px;
+    fill: currentColor;
   }
 }
 
@@ -238,7 +254,6 @@
 @media screen and (min-width: 768px) {
   .page-header {
     overflow: visible;
-    // height: 80px;
 
     &__navigation {
       display: flex;
@@ -296,33 +311,6 @@
   //   }
   // }
 
-  .contacts-header {
-    margin-left: auto;
-
-    &__item:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    &__link {
-      display: flex;
-      align-items: center;
-
-      font-size: 12px;
-      line-height: 1.17;
-      color: $primary-text-color;
-
-      &:hover,
-      &:focus {
-        color: $accent-color;
-      }
-    }
-
-    &__icon {
-      margin-right: 8px;
-      fill: currentColor;
-    }
-  }
-
   .menu-container {
     display: none;
   }
@@ -334,6 +322,9 @@
 
 @media screen and (min-width: 1200px) {
   .page-header {
+    &__navigation {
+      margin-left: 93px;
+    }
   }
 
   // .site-nav {
@@ -381,6 +372,10 @@
 
   .contacts-header {
     display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.14;
 
     &__item:not(:last-child) {
       margin-bottom: 0;
@@ -393,9 +388,6 @@
     &__link {
       padding-top: 32px;
       padding-bottom: 32px;
-
-      font-size: 14px;
-      line-height: 1.14;
     }
 
     &__icon {
