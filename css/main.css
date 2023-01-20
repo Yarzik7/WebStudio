@@ -878,6 +878,8 @@ body.is-open {
 .buttons--action {
   min-width: 200px;
   height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -890,6 +892,12 @@ body.is-open {
 }
 .buttons--action:hover, .buttons--action:focus {
   background-color: #188ce8;
+}
+@media screen and (max-width: 321px) {
+  .buttons--action {
+    max-width: 200px;
+    line-height: 1;
+  }
 }
 
 .section-hero {

@@ -14,6 +14,8 @@
   &--action {
     min-width: 200px;
     height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     font-weight: 700;
     line-height: 1.88;
@@ -27,6 +29,12 @@
     &:hover,
     &:focus {
       background-color: $hero-button-accent;
+    }
+
+    @media screen and (max-width: 321px) {
+      max-width: 200px;
+
+      line-height: 1;
     }
   }
 }
