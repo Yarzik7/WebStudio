@@ -944,7 +944,7 @@ body.is-open {
 }
 
 .overlay {
-  max-width: 480px;
+  max-width: 576px;
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -960,18 +960,22 @@ body.is-open {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero-mobile@2x.jpg);
   }
 }
-
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 577px) and (max-width: 960px) {
   .overlay {
-    max-width: 576px;
+    max-width: 960px;
   }
 }
+@media screen and (min-width: 961px) {
+  .overlay {
+    max-width: 1600px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section-hero {
     padding: 118px 204px;
   }
   .overlay {
-    max-width: 961px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background-hero-tablet.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero-tablet.jpg);
   }
@@ -993,7 +997,6 @@ body.is-open {
     line-height: 1.36;
   }
   .overlay {
-    max-width: 1600px;
     min-height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/background-hero.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero.jpg);

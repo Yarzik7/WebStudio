@@ -29,7 +29,7 @@
 }
 
 .overlay {
-  max-width: 480px;
+  max-width: 576px;
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -44,13 +44,21 @@
     background-image: linear-gradient($bg-hero-gradient, $bg-hero-gradient),
       url(../images/background-hero-mobile@2x.jpg);
   }
-}
 
-@media screen and (min-width: 480px) {
-  .overlay {
-    max-width: 576px;
+  @media screen and (min-width: 577px) and (max-width: 960px) {
+    max-width: 960px;
+  }
+
+  @media screen and (min-width: 961px) {
+    max-width: 1600px;
   }
 }
+
+// @media screen and (min-width: 480px) {
+//   .overlay {
+//     // max-width: 576px;
+//   }
+// }
 
 @media screen and (min-width: 768px) {
   .section-hero {
@@ -58,8 +66,6 @@
   }
 
   .overlay {
-    max-width: 961px;
-
     background-image: linear-gradient($bg-hero-gradient, $bg-hero-gradient),
       url(../images/background-hero-tablet.jpg);
 
@@ -84,7 +90,6 @@
   }
 
   .overlay {
-    max-width: 1600px;
     min-height: 600px;
 
     background-image: linear-gradient($bg-hero-gradient, $bg-hero-gradient),

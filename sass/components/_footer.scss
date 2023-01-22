@@ -1,7 +1,7 @@
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-   max-width: 1600px;
+  max-width: 1600px;
   margin: 0 auto;
 
   background-color: $bg-footer-color;
@@ -15,9 +15,6 @@
   &__logo {
     margin-bottom: 28px;
   }
-
-  // &__social {
-  // }
 
   &__subscribe {
     @media screen and (max-width: 1199px) {
