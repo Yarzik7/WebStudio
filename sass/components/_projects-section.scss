@@ -1,11 +1,8 @@
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
-
-  &__item:not(:last-child) {
-    margin-right: 8px;
-  }
+  gap: 8px;
+  margin-bottom: 40px;
 
   &__buttons {
     padding-top: 6px;
@@ -32,12 +29,19 @@
         0px 2px 2px rgba(0, 0, 0, 0.12);
     }
   }
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 15px;
+    width: 71.1%;
+    // padding-right: 130px;
+  }
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @extend %flex-grid;
+  margin: 0 auto;
 
   &__name {
     margin-top: 0;
@@ -56,7 +60,8 @@
   }
 
   &__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    max-width: 450px;
+    flex-basis: calc((100% - 0 * 30px) / 1);
   }
 
   &__caption {
@@ -64,13 +69,16 @@
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+    flex-grow: 1;
 
     border: 1px solid $projects-border-color;
     border-top: none;
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     text-decoration: none;
     transition: box-shadow $transition-duration $timing-function;
@@ -95,7 +103,7 @@
 
     width: 100%;
     height: 100%;
-    padding: 63px 24px;
+    padding: 77px 24px;
     display: block;
 
     font-size: 18px;
@@ -108,6 +116,33 @@
     .projects__link:hover &,
     .projects__link:focus & {
       transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    justify-content: flex-start;
+
+    &__item {
+      max-width: 354px;
+      flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+
+  .projects {
+    &__item {
+      flex-basis: calc((100% - 2 * 30px) / 3);
+    }
+
+    &__overlay {
+      padding: 63px 24px;
     }
   }
 }
