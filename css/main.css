@@ -1180,7 +1180,6 @@ body.is-open {
   }
 }
 .clients__item {
-  min-width: 210px;
   width: 100%;
   height: 92px;
   -ms-flex-preferred-size: calc((100% - 30px) / 2);
@@ -1190,8 +1189,6 @@ body.is-open {
   .clients__item {
     min-width: auto;
     max-width: 210px;
-    -ms-flex-preferred-size: calc((100% - 0px) / 1);
-        flex-basis: calc((100% - 0px) / 1);
   }
 }
 .clients__link {

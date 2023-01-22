@@ -20,20 +20,24 @@
   <body>
     <!-- Шапка сторінки -->
     <header class="page-header">
-      <div class="container">
-        <div class="page-header__container">
+      <div class="container page-header__container">
+        <!-- <div class="page-header__container"> -->
+        <a href="./index.html" class="logo page-header__logo"
+          >Web<span class="logo__header">Studio</span></a
+        >
+        <button class="menu-switch js-open-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="page-header__navigation">
           <nav class="page-header__nav-flex">
-            <a href="./index.html" class="logo page-header__logo"
-              >Web<span class="logo__header">Studio</span></a
-            >
             <ul class="site-nav list">
               <li class="site-nav__item">
-                <a href="./index.html" class="site-nav__link">Студія</a>
+                <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
               </li>
               <li class="site-nav__item">
-                <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
-                  >Портфоліо</a
-                >
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
               </li>
               <li class="site-nav__item"><a href="#" class="site-nav__link">Контакти</a></li>
             </ul>
@@ -58,6 +62,54 @@
             </li>
           </ul>
         </div>
+        <!-- </div> -->
+      </div>
+
+      <!-- Мобільне меню -->
+      <div class="menu-container js-menu-container">
+        <button class="menu-switch menu-container__close js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#menuClose"></use>
+          </svg>
+        </button>
+
+        <ul class="menu-site-nav list">
+          <li class="menu-site-nav__item">
+            <a href="./index.html" class="menu-site-nav__link menu-site-nav__link--current"
+              >Студія</a
+            >
+          </li>
+          <li class="menu-site-nav__item">
+            <a href="./portfolio.html" class="menu-site-nav__link">Портфоліо</a>
+          </li>
+          <li class="menu-site-nav__item"><a href="#" class="menu-site-nav__link">Контакти</a></li>
+        </ul>
+
+        <ul class="menu-contacts list">
+          <li class="menu-contacts__item">
+            <a href="tel:+380961111111" class="menu-contacts__link menu-contacts__link--big"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="menu-contacts__link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="menu-social list">
+          <li class="menu-social__item">
+            <a href="#" class="menu-social__link">Instagram</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="#" class="menu-social__link">Twitter</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="#" class="menu-social__link">Facebook</a>
+          </li>
+          <li class="menu-social__item">
+            <a href="#" class="menu-social__link">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
 
