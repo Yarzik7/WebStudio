@@ -76,6 +76,7 @@ body.is-open {
 }
 
 .section {
+  max-width: 1600px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -415,6 +416,8 @@ body.is-open {
 .page-header {
   position: relative;
   overflow: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
   border-bottom: 1px solid #ececec;
 }
 .page-header__container {
@@ -683,6 +686,8 @@ body.is-open {
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: #2f303a;
 }
 @media screen and (max-width: 767px) {
@@ -1122,6 +1127,8 @@ body.is-open {
 }
 .section-team {
   background-color: #f5f4fa;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .team__item {

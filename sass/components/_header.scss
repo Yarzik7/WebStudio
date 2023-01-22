@@ -1,6 +1,8 @@
 .page-header {
   position: relative;
   overflow: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
 
   border-bottom: 1px solid $header-border-color;
 
@@ -24,15 +26,6 @@
     padding-bottom: 16px;
   }
 }
-
-// .site-nav {
-//   &__link {
-//     font-size: 14px;
-//     line-height: 1.14px;
-
-//     @extend %header-links;
-//   }
-// }
 
 .site-nav {
   display: flex;
