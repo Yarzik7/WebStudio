@@ -40,6 +40,18 @@ h3 {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.clients, .team, .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
 body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -988,24 +1000,21 @@ body.is-open {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero@2x.jpg);
   }
 }
-.features {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
 .features__item {
-  max-width: 450px;
+  min-width: 450px;
   width: 100%;
+}
+@media screen and (max-width: 479px) {
+  .features__item {
+    min-width: auto;
+    max-width: 450px;
+  }
 }
 .features__icon-container {
   padding-top: 25px;
   padding-bottom: 25px;
+  padding-left: 190px;
+  padding-right: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1018,6 +1027,12 @@ body.is-open {
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
+}
+@media screen and (max-width: 479px) {
+  .features__icon-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .features__icon {
   min-width: 70px;
@@ -1039,20 +1054,11 @@ body.is-open {
   line-height: 1.71;
 }
 
-@media screen and (min-width: 480px) {
-  .features__item {
-    min-width: 450px;
-  }
-  .features__icon-container {
-    padding-left: 190px;
-    padding-right: 190px;
-  }
-}
 @media screen and (min-width: 768px) {
   .features__item {
     min-width: 354px;
-    -ms-flex-preferred-size: calc((100% - 90px) / 4);
-        flex-basis: calc((100% - 90px) / 4);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
   .features__icon-container {
     padding-left: 142px;
@@ -1062,6 +1068,8 @@ body.is-open {
 @media screen and (min-width: 1200px) {
   .features__item {
     min-width: 270px;
+    -ms-flex-preferred-size: calc((100% - 90px) / 4);
+        flex-basis: calc((100% - 90px) / 4);
   }
   .features__icon-container {
     padding-left: 100px;
@@ -1116,18 +1124,8 @@ body.is-open {
   background-color: #f5f4fa;
 }
 
-.team {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
 .team__item {
+  min-width: 450px;
   width: 100%;
   padding-bottom: 24px;
   text-align: center;
@@ -1138,6 +1136,7 @@ body.is-open {
 }
 @media screen and (max-width: 479px) {
   .team__item {
+    min-width: auto;
     max-width: 450px;
   }
 }
@@ -1158,11 +1157,6 @@ body.is-open {
   line-height: 1.19;
 }
 
-@media screen and (min-width: 480px) {
-  .team__item {
-    min-width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .team__item {
     min-width: 354px;
@@ -1178,21 +1172,20 @@ body.is-open {
         flex-basis: calc((100% - 90px) / 4);
   }
 }
-.clients {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
 .clients__item {
+  min-width: 210px;
   width: 100%;
   height: 92px;
-  max-width: 210px;
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (max-width: 479px) {
+  .clients__item {
+    min-width: auto;
+    max-width: 210px;
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
+  }
 }
 .clients__link {
   width: 100%;
@@ -1220,13 +1213,6 @@ body.is-open {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) {
-  .clients__item {
-    min-width: 210px;
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
-  }
-}
 @media screen and (min-width: 768px) {
   .clients__item {
     min-width: 226px;

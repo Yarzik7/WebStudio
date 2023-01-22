@@ -6,6 +6,13 @@
   transition: color $transition-duration $timing-function;
 }
 
+%flex-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 // @media screen and (min-width: 480px) {
 // }
 
